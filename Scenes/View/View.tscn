@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/View/Scripts/PlayersManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/View/Ground/Ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/View/Ball/Ball_RB.tscn" type="PackedScene" id=3]
+
+[node name="GameView" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 122.0
+margin_top = 64.0
+margin_right = 296.0
+margin_bottom = 143.0
+tab_size = 8
+text = "Arcane Game Test"
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.69826, -0.0294589, -0.715238, 0.339382, -0.866102, 0.366998, -0.63028, -0.498999, -0.594767, -50.1946, 59.6753, 0 )
+light_energy = 1.268
+
+[node name="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, -50 )
+
+[node name="Ball_RB" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522367, 3.02224, -20.2023 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.76818 )

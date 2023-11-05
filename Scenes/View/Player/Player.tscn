@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/View/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/View/Player/bat_joined.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.103444, 0.447993, 0.0550905 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.92549, 0.65098, 0.156863, 1 )
+
+[node name="RigidBody" type="RigidBody"]
+mode = 2
+mass = 270.286
+gravity_scale = 0.0
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.012, 0.446, 0.008 )
+shape = SubResource( 2 )
+
+[node name="bat_joined" type="MeshInstance" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_RigidBody_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_RigidBody_body_shape_entered"]
