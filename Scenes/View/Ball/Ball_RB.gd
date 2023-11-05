@@ -23,3 +23,4 @@ func start_position_loop():
 		translation = Vector3(initX, initY, initZ)  # set the position to (0, 10, 0)
 		linear_velocity = linearVelocity
 #		angular_velocity = angularVelocity
+

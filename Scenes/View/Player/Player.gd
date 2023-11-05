@@ -4,8 +4,10 @@ extends Node
 var pad:ArcanePad
 var padQuaternion = Quat()
 #onready var meshChild = get_child(1)
+onready var bonkSound:AudioStreamPlayer3D = get_child(2)
 
 func initialize(_pad:ArcanePad) -> void:
+	
 	prints("Pad user", _pad.user.name, "initialized")
 	pad = _pad
 	
@@ -71,9 +73,7 @@ func onIframePadDisconnect(e):
 	print(e)
 
 
-func _on_RigidBody_body_entered(body):
-	print("asdasd")
-
-
-func _on_RigidBody_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	print("qweqwe")
+func _on_Bat_body_entered(body):
+	pad.vibrate(200)
+	bonkSound.play()
+#	pad.emit(AEvents.ArcaneBaseEvent.new("hitBall"))

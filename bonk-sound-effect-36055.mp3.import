@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bonk-sound-effect-36055.mp3-baa497f1e6612926474be558df616c97.mp3str"
+
+[deps]
+
+source_file="res://bonk-sound-effect-36055.mp3"
+dest_files=[ "res://.import/bonk-sound-effect-36055.mp3-baa497f1e6612926474be558df616c97.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
