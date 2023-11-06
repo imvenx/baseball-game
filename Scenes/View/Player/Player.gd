@@ -74,6 +74,6 @@ func onIframePadDisconnect(e):
 
 
 func _on_Bat_body_entered(body):
-	pad.vibrate(200)
+	pad.vibrate(80)
 	bonkSound.play()
 #	pad.emit(AEvents.ArcaneBaseEvent.new("hitBall"))
