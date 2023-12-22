@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scenes/View/Scripts/PlayersManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/View/Scripts/View.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/View/Ground/Ground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/View/Ball/Ball_RB.tscn" type="PackedScene" id=3]
 
